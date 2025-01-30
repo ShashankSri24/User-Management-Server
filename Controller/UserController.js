@@ -1,8 +1,8 @@
 import { User } from "../model/UserModel.js";
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import multer from 'multer';
 import path from 'path';
-import { runInNewContext } from "vm";
+
 const storage = multer.diskStorage({
     destination:(req,file,cb)=>{
         cb(null,'public/upload')
